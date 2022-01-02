@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: 1122
+  host: localhost
+development:
+  <<: *default
+  database: campus-management-system-rails_development
+test:
+  <<: *default
+  database: campus-management-system-rails_test
+production:
+  <<: *default
+  database: campus-management-system-rails_production
